@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DashboardController!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h2>Welkom bij de Budget Buddy 2026 ({{ "now" |date("d-m-Y") }})</h2>
+        <div class="row border pb-2 pt-2">
+            <div class="col">
+                <div class="d-flex align-items-center bg-light border rounded p-3" style="max-width: 350px;">
+                    <!-- Icoon Gedeelte (Blauwe achtergrond) -->
+                    <div class="bg-info text-white d-flex align-items-center justify-content-center rounded" style="width: 50px; height: 50px;">
+                        <i class="bi bi-cash fs-1"></i>
+                    </div>
+
+                    <!-- Tekst Gedeelte -->
+                    <div class="ms-3">
+                        <small class="text-muted text-uppercase fw-bold">Huidig totaal budget</small>
+                        <h4 class="mb-0 fw-bold">{{ 'EUR' | currency_symbol }}{{ 0| number_format(2, ',', '.') }}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="d-flex align-items-center bg-light border rounded p-3" style="max-width: 350px;">
+                    <!-- Icoon Gedeelte (Blauwe achtergrond) -->
+                    <div class="bg-warning text-white d-flex align-items-center justify-content-center rounded" style="width: 50px; height: 50px;">
+                        <i class="bi bi-cash fs-1"></i>
+                    </div>
+
+                    <!-- Tekst Gedeelte -->
+                    <div class="ms-3">
+                        <small class="text-muted text-uppercase fw-bold">Vandaag uitgaven</small>
+                        <h4 class="mb-0 fw-bold">{{ 'EUR' | currency_symbol }}{{ 0| number_format(2, ',', '.') }}</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="d-flex align-items-center bg-light border rounded p-3" style="max-width: 350px;">
+                    <!-- Icoon Gedeelte (Blauwe achtergrond) -->
+                    <div class="bg-success text-white d-flex align-items-center justify-content-center rounded" style="width: 50px; height: 50px;">
+                        <i class="bi bi-cash fs-1"></i>
+                    </div>
+
+                    <!-- Tekst Gedeelte -->
+                    <div class="ms-3">
+                        <small class="text-muted text-uppercase fw-bold">Vandaag inkomsten</small>
+                        <h4 class="mb-0 fw-bold">{{ 'EUR' | currency_symbol }}{{ 0| number_format(2, ',', '.') }}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 class="mt-5">Huidig budget in categories</h3>
+        <div class="row ">
+            {% for category in categories %}
+                {% if category.status == "active" %}
+                    <div class="col-md-3 p-3 bg-light border-start border-info border-4 rounded-end m-3">
+                        <h5 class="text-black">{{ category.name }}</h5>
+                        <p class="mb-0 float-end"><b>{{ 'EUR' | currency_symbol }}{{ 0| number_format(2, ',', '.')}}</b></p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

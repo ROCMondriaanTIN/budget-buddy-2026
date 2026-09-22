@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Budget Buddy!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h2 class="text-center">Welkom bij de Budget Buddy 2026</h2>
+        <div class="row">
+            <div class="col-3">
+            </div>
+            <div class="col-6">
+                <img src="{{ asset('img/budget_buddy.png') }}" class="img-fluid ">
+            </div>
+            <div class="col-3">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row-12">
+                <table class="table">
+                    <tr>
+                        <th>menu-item</th>
+                        <th>uitleg</th>
+                    </tr>
+                    <tr>
+                        <td>Dashboard</td>
+                        <td>Hier is het complete overzicht over al je inkomsten en uitgaven.
+                            Hier staat per category hoeveel geld er nog over is.
+                            Een uitgave doen die hoger is dan het budget wordt geweigerd!</td>
+
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <img src="{{ asset('img/dashboard.png') }}" class="img-fluid">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Budget Management</td>
+                        <td>Inkomsten worden per category aan het begin van de maand aangevuld door ouders/verzorgers/bijbaantjes</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <img src="{{ asset('img/budget.png') }}" class="img-fluid">
+                        </td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td>Expense Management</td>
+                        <td>Uitgaven worden per category gedurende de gehele maand bijgehouden</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <img src="{{ asset('img/expense.png') }}" class="img-fluid">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Reports / Budget Report</td>
+                        <td>Maak een grafiek en een overzicht van inkomsten over een geselecteerde periode</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <img src="{{ asset('img/budget_report.png') }}" class="img-fluid">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Reports / Expense Report</td>
+                        <td>Maak een grafiek en een overzicht van uitgaven over een geselecteerde periode. Voorbeeld is over 1 dag</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <img src="{{ asset('img/expense_report.png') }}" class="img-fluid">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Maintanance / Category List</td>
+                        <td>Alle categorieen, deze kan je aan active/inactive maken </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <img src="{{ asset('img/category.png') }}" class="img-fluid">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Alle categorieen die wij gebruiken voor een jongere </td>
+                    </tr>
+                    <tr>
+                        <td>Categorieen</td>
+                        <td>    <ul>
+                                <li>Boodschappen</li>
+                                <li>Fiets / Scooter</li>
+                                <li>Telefoon</li>
+                                <li>Kleding</li>
+                                <li>Uitgaan</li>
+                            </ul></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
