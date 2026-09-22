@@ -4,13 +4,17 @@
 Deze repo is niet leeg zodat je zelf snel met met de applicatie kan gaan werken.
 ## Wat is er voor je gemaakt:
 - de Catogory entity
-- de CategoryController, HomeController en de Dashboard Controller
+- de CategoryController, HomeController en de DashboardController
 - de Layout
 - menuitem Home ->toont uitleg
 - menuitem Dashboard -> toont totaal budget, uitgaven en inkomsten per dag en budget per category
-- category -> toont alle beschikbare categorieen in tabelvorm
+- menuitem CategoryList -> toont alle beschikbare categorieen in tabelvorm
 
-
+## Wat is er voor je gemaakt:
+- maak de entity's ExpenseTransaction en BudgetTransaction
+- koppel beide tabellen OneToMany aan Category, iedere transactie hoort ook bij een Category!
+- Geef inhoud aan de menuItems
+  
 ## Benodigdheden - Wat heb je geinstalleerd
 * Composer
 * Scoop
@@ -23,9 +27,7 @@ Open Powershell en ga naar de map van de repository
 
 Kopieer het ```.env``` bestand naar ```.env.local```
 
-Pas de juiste DATABASE_URL regel toe (en haal het # teken ervoor weg)
-
-Maak de database aan die je gekozen hebt in de vorige regel (PHPMyAdmin of via symfony commando)
+Importeer de database uit /backup
 
 Type het commando ``composer install``
 
